@@ -49,9 +49,9 @@ Public Variables
 
 The following public variables are defined in the contract:
 
-tokenName: A string representing the name of the token (e.g., "RUSSRUSS").
+tokenName: A string representing the name of the token (e.g., "Oracle").
 
-tokenAbbrv: A string representing the abbreviated name of the token (e.g., "RUSS").
+tokenAbbrv: A string representing the abbreviated name of the token (e.g., "ORC").
 
 totalSupply: An unsigned integer representing the total supply of the token. Initially set to 0.
 
