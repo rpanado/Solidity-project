@@ -1,24 +1,17 @@
-MyToken Contract
+Oracle(ORC) - Simple ERC20 Token
+Oracle is a simple  ERC20 token smart contract implemmented in Solidity. This Solidity contract allows you to create and implements a basic token called MyToken, with the functionality of minting and burning tokens.The contract is implemented in Solidity, a programming language used for writing smart contracts on the Ethereum blockchain.
 
-This Solidity contract implements a basic token called MyToken, with the functionality of minting and burning tokens.The contract is implemented in Solidity, a programming language used for writing smart contracts on the Ethereum blockchain.
+Description
+Oracle(ORC) - Simple ERC20 Token is a type of cryptocurrency token created using the ERC20 standard on the Ethereum blockchain. ERC20 stands for "Ethereum Request for Comment 20" and is a standard interface for creating tokens on the Ethereum platform. It defines a set of rules and functions that a token must follow to be considered ERC20 compliant.
+A Simple ERC20 Token is similar to other ERC20 tokens in that it can be programmed to represent any fungible asset or currency. It can be used for various purposes, such as creating a native currency for a decentralized application (DApp), facilitating tokenized assets, or enabling token-based incentives and rewards in a blockchain ecosystem.
+The simplicity of a Simple ERC20 Token lies in its adherence to the ERC20 standard, which provides a basic set of functions like transferring tokens, checking account balances, and approving token allowances. By conforming to this standard, developers can ensure compatibility and interoperability with other ERC20-compatible wallets, exchanges, and smart contracts.
+Creating a Simple ERC20 Token typically involves writing and deploying a smart contract on the Ethereum blockchain that defines the token's behavior and attributes, such as its name, symbol, total supply, and decimals. Once deployed, the token can be transferred, bought, sold, or used within the defined parameters of the smart contract and the Ethereum ecosystem.
 
-Requirements
+Getting Started
+Executing program
+To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-The following conditions are intended to be satisfied by the MyToken contract:
-
-Public variables in the contract should be used to record information about the coin, such as the token name, token abbreviation, and the total supply.
-
-There should be a mapping in the contract that links addresses to token balances.
-
-A mint feature that raises the total quantity of tokens and boosts the balance at the "sender" address should be included in the contract.
-
-A burn function that reduces the overall supply of tokens and subtracts the specified sum from the balance of the "sender" address should be included in the contract.
-
-To guarantee that the balance of the "sender" is more than or equal to the amount to be burned, the burn function should have conditionals.
-
-Code
-
-solidity
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
 
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
@@ -45,28 +38,15 @@ function burn (address _address, uint _value) public {
         }   
     }
 }
-Public Variables
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "mytoken.sol" button.
 
-The following public variables are defined in the contract:
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "mytoken" contract from the dropdown menu, and then click on the "Deploy" button.
 
-tokenName: A string representing the name of the token (e.g., "Oracle").
+Once the contract is deployed, you can interact with it by calling the mytoken function. Click on the "mytoken" contract in the left-hand sidebar, and then click on the "mytoken" function.Copy the account and paste under address click transact. You may now check the burn and mint function.You can also call Balances,tokeAbbrv,tokeName and totalSupply function click on the "transact" button to execute the function and retrieve the "mytoken.(constructor)value" message with the status of true Transaction mined and execution succeed.
 
-tokenAbbrv: A string representing the abbreviated name of the token (e.g., "ORC").
-
-totalSupply: An unsigned integer representing the total supply of the token. Initially set to 0.
-
-Mapping
-
-The contract uses a mapping variable named balances to keep track of token balances for each address. The mapping maps an address to an unsigned integer representing the balance of tokens owned by that address.
-
-Mint Function
-
-The mint function allows the creation of new tokens and assigns them to a specified address. It takes two parameters: _address (the recipient address) and _value (the amount of tokens to be minted). The function increases the total supply of tokens by the specified value and adds the minted tokens to the balance of the specified address.
-
-Burn Function
-
-The burn function allows the destruction of tokens owned by a specified address. It takes two parameters: _address (the address owning the tokens) and _value (the amount of tokens to be burned). The function checks if the balance of the specified address is greater than or equal to the value to be burned. If so, it decreases the total supply by the specified value and reduces the balance of the specified address by the burned tokens.
+Authors
+Metacrafter rpanado
+@metacraftersio
 
 License
-
-This contract is released under the MIT License.
+This project is licensed under the MIT License - see the LICENSE.md file for details
