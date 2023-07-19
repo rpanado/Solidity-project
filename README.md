@@ -1,56 +1,78 @@
-Oracle(ORC) - Simple ERC20 Token
-Oracle is a simple  ERC20 token smart contract implemmented in Solidity. This Solidity contract allows you to create and implements a basic token called MyToken, with the functionality of minting and burning tokens.The contract is implemented in Solidity, a programming language used for writing smart contracts on the Ethereum blockchain.
+ETHAssessment
+The assessment demonstrates how mint, burn and totalSupply function in NFT Token. The purpose of this program is to provide people with basic knowledge. This program initializes the very core of using solidity ETHAssessment and that is creating a token between all those modules accumulated into one.
 
 Description
-Oracle(ORC) - Simple ERC20 Token is a type of cryptocurrency token created using the ERC20 standard on the Ethereum blockchain. ERC20 stands for "Ethereum Request for Comment 20" and is a standard interface for creating tokens on the Ethereum platform. It defines a set of rules and functions that a token must follow to be considered ERC20 compliant.
-A Simple ERC20 Token is similar to other ERC20 tokens in that it can be programmed to represent any fungible asset or currency. It can be used for various purposes, such as creating a native currency for a decentralized application (DApp), facilitating tokenized assets, or enabling token-based incentives and rewards in a blockchain ecosystem.
-The simplicity of a Simple ERC20 Token lies in its adherence to the ERC20 standard, which provides a basic set of functions like transferring tokens, checking account balances, and approving token allowances. By conforming to this standard, developers can ensure compatibility and interoperability with other ERC20-compatible wallets, exchanges, and smart contracts.
-Creating a Simple ERC20 Token typically involves writing and deploying a smart contract on the Ethereum blockchain that defines the token's behavior and attributes, such as its name, symbol, total supply, and decimals. Once deployed, the token can be transferred, bought, sold, or used within the defined parameters of the smart contract and the Ethereum ecosystem.
+Solidity ETHAssessment is an object-oriented program that certifies something evolutionary throughout decades to come and this will be able to help us navigate through the blockchain Ethereum. It teaches us language that used to build smart contracts on multiple blockchain systems, the most prominent just like JP Morgan, Coco Cola etc. definetly the definition of prominent; of which being Ethereum.
 
-Getting Started
+Getting started
+Installing the software
+This is the easy and most efficient way to get through the Blockchain stuff. Just get to https://remix.ethereum.org/. and get started with your token! Of course, it's not THAT easy isn't it? well just press the plus (+) button and you're good to code! (with minor adjustments like naming your file with .sol whichever you like) ()
 
-Installing
- • To run this program, you can use Remix, an online Solidity IDE. 
- • To get started, go to the Remix website at https://remix.ethereum.org/.
+Here is the following steps on what i did:
 
-Executing program
- • Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar.
- • Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+mytoken.sol
+1st Code
+Secondly, you'd need to copy and paste the code regarding the final assessment and then follow Chris' instructions on how to efficiently use the remix and the coding altogether
 
-// SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+contract mytoken {
 
-contract MyToken {
+    // public variables here
+    string public tokenName = "ORACLE";
+    string public tokenAbbrv = "ORC";
+    uint public totalSupply = 0;
 
-// public variables here
-string public tokenName = "Oracle";
-string public tokenAbbrv = "ORC";
-uint public totalSupply = 0;
 
-// mapping variable here
-mapping (address => uint) public balances;
-// mint function
-function mint (address _address, uint _value) public {
-    totalSupply += _value;
-    balances [_address] += _value;    
-}
-// burn function
-function burn (address _address, uint _value) public {
-    if (balances[_address] >= _value){
-    totalSupply -= _value;
-    balances [_address] -= _value;  
-        }   
+You'll need to put variables of your Token name and the Abbreviation of that token being a public domain which helps you differenciate the Name and the Abbreviations. (as stated in here, i did caps-on 'oracle' and the abbreviation of it being 'orc' with all caps)
+
+and initiating with mapping the variable (making the Address => uint as your public balances) uint is basically an unsigned int that doesnt go by negative and also doesn't add anything hence, being a zero (0) value towards the public variables indicated in the code.
+
+2nd Code
+    // mapping variable here
+    mapping(address => uint) public balances;
+in mapping variables its usually great if its public as it easier to access it entirely.
+
+This will be passing the mapping area and since every address starts with a u end, it will give it to the address and the address will return the token amount that the address has. (therefore its called 'balances')
+
+3rd Code
+in the mint section, you'll have to do an address and a value that pertains the function that increases the total supply by that number and increases the balance of the address by that amount. Since it has a parameter should have an address and a value (in which i did underscore address and underscore value (_address, _value) to differenciate the parameters into the normal values)
+
+recalling from above being a public so it's easier to work with when giving it value, when it's pertaining in real life you would never make it public, knowing the dangers!
+
+ // mint function
+    function mint (address _address, uint _value) public {
+        totalSupply += _value;
+        balances [_address] += _value;
+     }
+in the second one we would need to do the burn and minting function which is basically the same except using the functions of '+=' on the mint function
+
+in the mint function this will be the increasing of total supply by the amount of that's already passed by using the total supply and balances (with calling the _address and adding the value altgoether) and the address being increased by the balances together with the value.
+
+    // burn function
+    function burn (address _address, uint _value) public {
+        if (balances [_address ] >= _value) {
+
+        totalSupply -= _value;
+        balances [_address] -= _value;
+        }
+        
     }
-}
-• To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "mytoken.sol" button.
+in the burn function works the opposite of the mint function as it destroys tokens (it will take an address in value just like in the mint function) and removes the total supply and the balance from the address altogether. Copy pasting the mint function but the opposite run by using the subtraction symbol when it has the plus symbol underneath it and viola! you have now just gotten the burn function that basically annihilates your token!
 
-• Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "mytoken" contract from the dropdown menu, and then click on the "Deploy" button.
+you'll be using the opposite which is '-=' (A brief reminder that any number that pertains as a negative will never be called in this section e.i -1 or so. So the value would always be either 0 or above. )
 
-• Once the contract is deployed, you can interact with it by calling the mytoken function. Click on the "mytoken" contract in the left-hand sidebar, and then click on the "mytoken" function.Copy the account and paste under address click transact. You may now check the burn and mint function.You can also call Balances,tokeAbbrv,tokeName and totalSupply function click on the "transact" button to execute the function and retrieve the "mytoken.(constructor)value" message with the status of true Transaction mined and execution succeed.
+lastly on the burn function being called out; you need to make a condition to make sure the balance of the amount you gotten is greater or equal that's supposed to be burned. (giving the if function to differinciate the value you gave to the mint and the one you're supposed to burn)
+
+and calling the total supply and the balances altogether
+
+once this is all connected you'll need to open the "solidity compiler" on the left side of the remix.etherium.org (which you'll be doing your compiling) and use the 'compile my token.sol' which is located at the left side. once that's done it will run on the bottom of the website saying it ran.
+
+Running the Code
+4th thing you'll need to do is deploy and run tab which is located below at the solidity compiler button. with it opening, you'll see the orange button that says deploy which grants you to see if your token is available or not. You'll have to test the tokens(abbrv, name, and total supply buttons) within the 'deployed contracts'
+
+In able to transact and see results, finally youll need to copy your account which is directed at the deploy and run transactions and copy paste it and opening the mint and burn below the deployed contracts. Giving them value (equal or greater than the one you're burning) and pasting the account numbers you just got and putting them into the address section and giving value to the value section. When ran by the token abbrv it will give the certain amount of you just did (500 for example to the mint function that will call out and give you 500 tokens as an example) and giving it the total supply of also 500. the same with Burn section, same sequence different number (1000 for example, it will burn the 1k you just gotten to the burn function) and testing it with the totalsupply section and the token abbrv and you're done! that's the whole sequence of mytoken!
+
+Advice/Help
+Any advice can ask @ the discord with faith/Chris as your guide!
 
 Authors
-Metacrafter rpanado
-@metacraftersio
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
+Panado, Rachel Ann D. NTC Email: 8214677@ntc.edu.ph
