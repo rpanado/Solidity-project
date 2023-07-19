@@ -1,10 +1,13 @@
 ETHAssessment
+
 The assessment demonstrates how mint, burn and totalSupply function in NFT Token. The purpose of this program is to provide people with basic knowledge. This program initializes the very core of using solidity ETHAssessment and that is creating a token between all those modules accumulated into one.
 
 Description
+
 Solidity ETHAssessment is an object-oriented program that certifies something evolutionary throughout decades to come and this will be able to help us navigate through the blockchain Ethereum. It teaches us language that used to build smart contracts on multiple blockchain systems, the most prominent just like JP Morgan, Coco Cola etc. definetly the definition of prominent; of which being Ethereum.
 
 Getting started
+
 Installing the software
 This is the easy and most efficient way to get through the Blockchain stuff. Just get to https://remix.ethereum.org/. and get started with your token! Of course, it's not THAT easy isn't it? well just press the plus (+) button and you're good to code! (with minor adjustments like naming your file with .sol whichever you like) ()
 
@@ -27,6 +30,7 @@ You'll need to put variables of your Token name and the Abbreviation of that tok
 and initiating with mapping the variable (making the Address => uint as your public balances) uint is basically an unsigned int that doesnt go by negative and also doesn't add anything hence, being a zero (0) value towards the public variables indicated in the code.
 
 2nd Code
+
     // mapping variable here
     mapping(address => uint) public balances;
 in mapping variables its usually great if its public as it easier to access it entirely.
@@ -34,6 +38,7 @@ in mapping variables its usually great if its public as it easier to access it e
 This will be passing the mapping area and since every address starts with a u end, it will give it to the address and the address will return the token amount that the address has. (therefore its called 'balances')
 
 3rd Code
+
 in the mint section, you'll have to do an address and a value that pertains the function that increases the total supply by that number and increases the balance of the address by that amount. Since it has a parameter should have an address and a value (in which i did underscore address and underscore value (_address, _value) to differenciate the parameters into the normal values)
 
 recalling from above being a public so it's easier to work with when giving it value, when it's pertaining in real life you would never make it public, knowing the dangers!
@@ -72,7 +77,9 @@ Running the Code
 In able to transact and see results, finally youll need to copy your account which is directed at the deploy and run transactions and copy paste it and opening the mint and burn below the deployed contracts. Giving them value (equal or greater than the one you're burning) and pasting the account numbers you just got and putting them into the address section and giving value to the value section. When ran by the token abbrv it will give the certain amount of you just did (500 for example to the mint function that will call out and give you 500 tokens as an example) and giving it the total supply of also 500. the same with Burn section, same sequence different number (1000 for example, it will burn the 1k you just gotten to the burn function) and testing it with the totalsupply section and the token abbrv and you're done! that's the whole sequence of mytoken!
 
 Advice/Help
+
 Any advice can ask @ the discord with faith/Chris as your guide!
 
 Authors
+
 Panado, Rachel Ann D. NTC Email: 8214677@ntc.edu.ph
