@@ -72,7 +72,8 @@ and calling the total supply and the balances altogether
 once this is all connected you'll need to open the "solidity compiler" on the left side of the remix.etherium.org (which you'll be doing your compiling) and use the 'compile my token.sol' which is located at the left side. once that's done it will run on the bottom of the website saying it ran.
 
 Running the Code
-4th thing you'll need to do is deploy and run tab which is located below at the solidity compiler button. with it opening, you'll see the orange button that says deploy which grants you to see if your token is available or not. You'll have to test the tokens(abbrv, name, and total supply buttons) within the 'deployed contracts'
+
+4th step you'll need to do is deploy and run tab which is located below at the solidity compiler button. with it opening, you'll see the orange button that says deploy which grants you to see if your token is available or not. You'll have to test the tokens(abbrv, name, and total supply buttons) within the 'deployed contracts'
 
 In able to transact and see results, finally youll need to copy your account which is directed at the deploy and run transactions and copy paste it and opening the mint and burn below the deployed contracts. Giving them value (equal or greater than the one you're burning) and pasting the account numbers you just got and putting them into the address section and giving value to the value section. When ran by the token abbrv it will give the certain amount of you just did (500 for example to the mint function that will call out and give you 500 tokens as an example) and giving it the total supply of also 500. the same with Burn section, same sequence different number (1000 for example, it will burn the 1k you just gotten to the burn function) and testing it with the totalsupply section and the token abbrv and you're done! that's the whole sequence of mytoken!
 
@@ -80,6 +81,6 @@ Advice/Help
 
 Any advice can ask @ the discord with faith/Chris as your guide!
 
-Authors
+Author
 
 Panado, Rachel Ann D. NTC Email: 8214677@ntc.edu.ph
