@@ -8,10 +8,14 @@ The simplicity of a Simple ERC20 Token lies in its adherence to the ERC20 standa
 Creating a Simple ERC20 Token typically involves writing and deploying a smart contract on the Ethereum blockchain that defines the token's behavior and attributes, such as its name, symbol, total supply, and decimals. Once deployed, the token can be transferred, bought, sold, or used within the defined parameters of the smart contract and the Ethereum ecosystem.
 
 Getting Started
-Executing program
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+Installing
+ • To run this program, you can use Remix, an online Solidity IDE. 
+ • To get started, go to the Remix website at https://remix.ethereum.org/.
+
+Executing program
+ • Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar.
+ • Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
 
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
@@ -38,11 +42,11 @@ function burn (address _address, uint _value) public {
         }   
     }
 }
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "mytoken.sol" button.
+• To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "mytoken.sol" button.
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "mytoken" contract from the dropdown menu, and then click on the "Deploy" button.
+• Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "mytoken" contract from the dropdown menu, and then click on the "Deploy" button.
 
-Once the contract is deployed, you can interact with it by calling the mytoken function. Click on the "mytoken" contract in the left-hand sidebar, and then click on the "mytoken" function.Copy the account and paste under address click transact. You may now check the burn and mint function.You can also call Balances,tokeAbbrv,tokeName and totalSupply function click on the "transact" button to execute the function and retrieve the "mytoken.(constructor)value" message with the status of true Transaction mined and execution succeed.
+• Once the contract is deployed, you can interact with it by calling the mytoken function. Click on the "mytoken" contract in the left-hand sidebar, and then click on the "mytoken" function.Copy the account and paste under address click transact. You may now check the burn and mint function.You can also call Balances,tokeAbbrv,tokeName and totalSupply function click on the "transact" button to execute the function and retrieve the "mytoken.(constructor)value" message with the status of true Transaction mined and execution succeed.
 
 Authors
 Metacrafter rpanado
